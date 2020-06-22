@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple ways to set DOM event handler</title>
+</head>
+<body>
+    <li>My item</li>
+    <li>Lorem, ipsum.</li>
+    <li onclick="this.innerText='Some one clicked'">Atque, cum.</li>
+    <li onclick="alert('Hello Rerum')">Esse, libero!</li>
+    <li onclick="itemClickHandler(event)">Ad, repudiandae?</li>
+    <li id="lastPerson">Placeat, animi!</li>
+</body>
+<script>
+    function itemClickHandler(event){
+        console.log(event.target.innerText);
+    }
+    document.getElementById('lastPerson').addEventListener('click', itemClickHandler);
+</script>
+</html>
