@@ -24,11 +24,10 @@ const friendlyPerson = {
     salary : 25000
 }
 
-normalPerson.chargeBill();
-console.log(normalPerson.chargeBill.bind(heroPerson));
+const heroChargeBill = normalPerson.chargeBill.bind(heroPerson);
 
-// normalPerson.chargeBill(500); 
-// console.log(normalPerson.salary); //14500
+heroChargeBill(500);  // { firstName: 'Hero', lastName: 'Balam', salary: 25000 }
+console.log(heroPerson.salary); //24500
 
-// normalPerson.chargeBill(3000);
-// console.log(normalPerson.salary); //11500
+normalPerson.chargeBill(3000);
+console.log(normalPerson.salary); //12000
