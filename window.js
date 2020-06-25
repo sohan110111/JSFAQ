@@ -18,4 +18,4 @@ console.log('name inside function', name); // It's global variable(name). So it'
 var sum = add(20, 10);
 console.log(sum);
 
-console.log('result outside ', result);
+//console.log('result outside ', result);
